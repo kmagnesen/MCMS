@@ -171,7 +171,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyTableCellID" id="qEN-MY-5uC">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailCellID" id="qEN-MY-5uC">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qEN-MY-5uC" id="ivf-i3-EQT">
@@ -239,6 +239,31 @@
                                     </mask>
                                 </variation>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQQ-hu-yex">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="WwM-8T-BSA"/>
+                                    <constraint firstAttribute="width" constant="61" id="y9s-3x-U3L"/>
+                                </constraints>
+                                <state key="normal" title="Add Skill">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="WwM-8T-BSA"/>
+                                        <exclude reference="y9s-3x-U3L"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="WwM-8T-BSA"/>
+                                        <include reference="y9s-3x-U3L"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="onAddSkillTapped:" destination="y0c-cu-tUU" eventType="touchUpInside" id="DXY-3M-iTl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -249,9 +274,11 @@
                             <constraint firstItem="CgK-gt-YRj" firstAttribute="top" secondItem="Tpl-Ba-Zgp" secondAttribute="topMargin" constant="64" id="BLq-wk-MKf">
                                 <variation key="widthClass=compact" constant="72"/>
                             </constraint>
+                            <constraint firstItem="jQQ-hu-yex" firstAttribute="leading" secondItem="Tpl-Ba-Zgp" secondAttribute="leadingMargin" constant="7" id="DY7-k7-jgU"/>
                             <constraint firstItem="kxV-lX-ceI" firstAttribute="top" secondItem="Tpl-Ba-Zgp" secondAttribute="topMargin" constant="72" id="J6z-UI-Wa5">
-                                <variation key="widthClass=compact" constant="116"/>
+                                <variation key="widthClass=compact" constant="154"/>
                             </constraint>
+                            <constraint firstItem="jQQ-hu-yex" firstAttribute="top" secondItem="Tpl-Ba-Zgp" secondAttribute="topMargin" constant="145" id="L09-fM-rri"/>
                             <constraint firstItem="UOy-iA-qVu" firstAttribute="trailing" secondItem="Tpl-Ba-Zgp" secondAttribute="trailingMargin" id="LlS-jH-qJF"/>
                             <constraint firstItem="AP4-n7-ZaN" firstAttribute="top" secondItem="kxV-lX-ceI" secondAttribute="bottom" id="MDH-pX-cC9"/>
                             <constraint firstItem="UOy-iA-qVu" firstAttribute="top" secondItem="Tpl-Ba-Zgp" secondAttribute="topMargin" constant="102" id="Qic-oz-1aQ">
@@ -269,16 +296,19 @@
                                 <exclude reference="CgK-gt-YRj"/>
                                 <exclude reference="RCJ-s7-GfS"/>
                                 <exclude reference="UOy-iA-qVu"/>
+                                <exclude reference="jQQ-hu-yex"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="BBr-aT-mOc"/>
                                 <exclude reference="Vjd-dW-Rrb"/>
-                                <exclude reference="J6z-UI-Wa5"/>
-                                <exclude reference="Vqk-97-thr"/>
-                                <exclude reference="ZFE-2g-M5S"/>
+                                <exclude reference="DY7-k7-jgU"/>
+                                <exclude reference="L09-fM-rri"/>
                                 <exclude reference="2BE-hA-2Jp"/>
                                 <exclude reference="BLq-wk-MKf"/>
                                 <exclude reference="RYa-fW-wf6"/>
+                                <exclude reference="J6z-UI-Wa5"/>
+                                <exclude reference="Vqk-97-thr"/>
+                                <exclude reference="ZFE-2g-M5S"/>
                                 <exclude reference="LlS-jH-qJF"/>
                                 <exclude reference="Qic-oz-1aQ"/>
                                 <exclude reference="gc8-Tb-BKd"/>
@@ -291,16 +321,19 @@
                                 <include reference="CgK-gt-YRj"/>
                                 <include reference="RCJ-s7-GfS"/>
                                 <include reference="UOy-iA-qVu"/>
+                                <include reference="jQQ-hu-yex"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="BBr-aT-mOc"/>
                                 <include reference="Vjd-dW-Rrb"/>
-                                <include reference="J6z-UI-Wa5"/>
-                                <include reference="Vqk-97-thr"/>
-                                <include reference="ZFE-2g-M5S"/>
+                                <include reference="DY7-k7-jgU"/>
+                                <include reference="L09-fM-rri"/>
                                 <include reference="2BE-hA-2Jp"/>
                                 <include reference="BLq-wk-MKf"/>
                                 <include reference="RYa-fW-wf6"/>
+                                <include reference="J6z-UI-Wa5"/>
+                                <include reference="Vqk-97-thr"/>
+                                <include reference="ZFE-2g-M5S"/>
                                 <include reference="LlS-jH-qJF"/>
                                 <include reference="Qic-oz-1aQ"/>
                                 <include reference="gc8-Tb-BKd"/>
@@ -309,13 +342,19 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Creature Bio" id="Ata-Sk-qeL">
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="Fl4-Tv-YJo"/>
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="Fl4-Tv-YJo">
+                            <connections>
+                                <action selector="editButtonTapped:" destination="y0c-cu-tUU" id="2ct-rk-0hy"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addSkillButton" destination="jQQ-hu-yex" id="DXG-Qr-E6Q"/>
                         <outlet property="creatureImageView" destination="RCJ-s7-GfS" id="Dfa-4V-V8S"/>
-                        <outlet property="creatureTableView" destination="kxV-lX-ceI" id="0KN-A9-o9u"/>
-                        <outlet property="descriptionTextField" destination="UOy-iA-qVu" id="5oS-QD-lV6"/>
-                        <outlet property="fullnameTextField" destination="CgK-gt-YRj" id="FBq-uG-XzP"/>
+                        <outlet property="inputDescription" destination="UOy-iA-qVu" id="G2c-hS-4xy"/>
+                        <outlet property="inputName" destination="CgK-gt-YRj" id="10J-k7-iDU"/>
+                        <outlet property="navButtonEdit" destination="Fl4-Tv-YJo" id="JYB-n5-3oQ"/>
+                        <outlet property="skillsTableView" destination="kxV-lX-ceI" id="Rfh-Hn-pdt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6pt-dT-YHc" userLabel="First Responder" sceneMemberID="firstResponder"/>

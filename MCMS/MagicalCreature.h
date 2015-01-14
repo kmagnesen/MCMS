@@ -11,11 +11,14 @@
 
 @interface MagicalCreature : NSObject
 
+@property NSString *fullname;
+@property NSString *creatureDescription;
+@property NSMutableArray *skills;
+
 -(instancetype)initWithFullname:(NSString *)fullname;
 -(instancetype)initWithFullname:(NSString *)fullname creatureDescription:(NSString *)description;
 
-@property NSString *fullname;
-@property NSString *creatureDescription;
-
++(instancetype)initWithFullname:(NSString *)fullname;
++(instancetype)initWithFullname:(NSString *)fullname creatureDescription:(NSString *)description;
 
 @end

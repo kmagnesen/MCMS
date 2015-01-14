@@ -17,6 +17,8 @@
 
 @property (strong, nonatomic) IBOutlet UITableView *creatureTableView;
 
+@property NSIndexPath *editIndexPath;
+
 @end
 
 @implementation RootViewController
@@ -30,23 +32,35 @@
 
     self.creatureArray = [NSMutableArray arrayWithObjects:randySavage, hulkHogan, fredSavage, nil];
 
-    for (MagicalCreature *magicalCreature in self.creatureArray) {
-        NSLog(@"%@", magicalCreature);
-    }
+//    for (int i = 0; i < 50 ; i++) {
+//        [self.creatureArray addObject:[MagicalCreature initWithFullname:[NSString stringWithFormat:@"Creature %i", i] creatureDescription:[NSString stringWithFormat:@"Description %i", i]]];
+//    }
+}
+
+- (void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+
+    [self.creatureTableView beginUpdates];
+    [self.creatureTableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:self.editIndexPath, nil] withRowAnimation:UITableViewRowAnimationRight];
+    [self.creatureTableView endUpdates];
+}
+
+- (void) resetComponents {
+    self.fullnameTextField.text = @"";
+    self.descriptionTextField.text = @"";
+    
 }
 
 - (IBAction)onAddButtonTapped:(UIButton *)sender {
-    
-    NSString *descriptionEntry = self.descriptionTextField.text;
-    NSString *nameEntry = self.fullnameTextField.text;
-    MagicalCreature *creature = [[MagicalCreature alloc] initWithFullname:nameEntry creatureDescription:descriptionEntry];
+
+    MagicalCreature *creature = [[MagicalCreature alloc] initWithFullname:self.fullnameTextField.text creatureDescription:self.descriptionTextField.text];
+
     [self.creatureArray addObject:creature];
 
-
-    self.fullnameTextField.text = @"";
-    self.descriptionTextField.text = @"";
-    [self.fullnameTextField resignFirstResponder];
     [self.creatureTableView reloadData];
+
+    [self resetComponents];
+
 }
 
 #pragma mark UITableViewDataSource
@@ -67,9 +81,9 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSIndexPath *selectedIndexPath = self.creatureTableView.indexPathForSelectedRow;
     CreatureViewController *vc = segue.destinationViewController;
-    MagicalCreature *creatureTapped = [self.creatureArray objectAtIndex:selectedIndexPath.row];
+    self.editIndexPath = self.creatureTableView.indexPathForSelectedRow;
+    MagicalCreature *creatureTapped = [self.creatureArray objectAtIndex:self.editIndexPath.row];
     vc.magicalCreature = creatureTapped;
 }
 

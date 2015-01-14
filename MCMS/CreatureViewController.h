@@ -12,6 +12,5 @@
 @interface CreatureViewController : UIViewController
 
 @property MagicalCreature *magicalCreature;
-@property NSMutableArray *creatureArray;
 
 @end

@@ -13,6 +13,8 @@
 -(instancetype)initWithFullname:(NSString *)fullname {
     self = [super init];
     self.fullname = fullname;
+    self.creatureDescription = @"";
+    self.skills = [NSMutableArray new];
     return self;
 }
 
@@ -22,8 +24,16 @@
     return self;
 }
 
++(instancetype)initWithFullname:(NSString *)fullname {
+    return [[MagicalCreature alloc] initWithFullname:fullname];
+}
+
++(instancetype)initWithFullname:(NSString *)fullname creatureDescription:(NSString *)description{
+    return [[MagicalCreature alloc] initWithFullname:fullname creatureDescription:description];
+}
+
 -(NSString *)description {
-    return [NSString stringWithFormat:@"MagicalCreature:%@ (%@)", self.fullname, self.creatureDescription];
+    return [NSString stringWithFormat:@"MagicalCreature: %@ Description: (%@)", self.fullname, self.creatureDescription];
 }
 
 @end
