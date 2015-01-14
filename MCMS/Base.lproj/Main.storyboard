@@ -155,7 +155,7 @@
             </objects>
             <point key="canvasLocation" x="963" y="336"/>
         </scene>
-        <!--Creature View Controller-->
+        <!--Fighter Bio-->
         <scene sceneID="s5x-TD-6fv">
             <objects>
                 <viewController id="y0c-cu-tUU" customClass="CreatureViewController" sceneMemberID="viewController">
@@ -202,12 +202,18 @@
                                     </mask>
                                 </variation>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RCJ-s7-GfS">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RCJ-s7-GfS">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <accessibility key="accessibilityConfiguration" label=""/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="74" id="AAy-m1-KTe"/>
                                     <constraint firstAttribute="height" constant="74" id="fcu-WM-fKz"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="machoman" value="/Users/kmagnesen/Desktop/MM Images/machoman.png"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="hulk" value="/Users/kmagnesen/Desktop/MM Images/hulk.png"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="fredsavage" value="/Users/kmagnesen/Desktop/MM Images/fredsavage.png"/>
+                                </userDefinedRuntimeAttributes>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="AAy-m1-KTe"/>
@@ -243,9 +249,11 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="WwM-8T-BSA"/>
-                                    <constraint firstAttribute="width" constant="61" id="y9s-3x-U3L"/>
+                                    <constraint firstAttribute="width" constant="61" id="y9s-3x-U3L">
+                                        <variation key="widthClass=compact" constant="103"/>
+                                    </constraint>
                                 </constraints>
-                                <state key="normal" title="Add Skill">
+                                <state key="normal" title="+ Super Power">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
@@ -274,9 +282,11 @@
                             <constraint firstItem="CgK-gt-YRj" firstAttribute="top" secondItem="Tpl-Ba-Zgp" secondAttribute="topMargin" constant="64" id="BLq-wk-MKf">
                                 <variation key="widthClass=compact" constant="72"/>
                             </constraint>
-                            <constraint firstItem="jQQ-hu-yex" firstAttribute="leading" secondItem="Tpl-Ba-Zgp" secondAttribute="leadingMargin" constant="7" id="DY7-k7-jgU"/>
+                            <constraint firstItem="jQQ-hu-yex" firstAttribute="leading" secondItem="Tpl-Ba-Zgp" secondAttribute="leadingMargin" constant="7" id="DY7-k7-jgU">
+                                <variation key="widthClass=compact" constant="-14"/>
+                            </constraint>
                             <constraint firstItem="kxV-lX-ceI" firstAttribute="top" secondItem="Tpl-Ba-Zgp" secondAttribute="topMargin" constant="72" id="J6z-UI-Wa5">
-                                <variation key="widthClass=compact" constant="154"/>
+                                <variation key="widthClass=compact" constant="238"/>
                             </constraint>
                             <constraint firstItem="jQQ-hu-yex" firstAttribute="top" secondItem="Tpl-Ba-Zgp" secondAttribute="topMargin" constant="145" id="L09-fM-rri"/>
                             <constraint firstItem="UOy-iA-qVu" firstAttribute="trailing" secondItem="Tpl-Ba-Zgp" secondAttribute="trailingMargin" id="LlS-jH-qJF"/>
@@ -341,7 +351,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="Ata-Sk-qeL">
+                    <navigationItem key="navigationItem" title="Fighter Bio" id="Ata-Sk-qeL">
                         <barButtonItem key="rightBarButtonItem" title="Edit" id="Fl4-Tv-YJo">
                             <connections>
                                 <action selector="editButtonTapped:" destination="y0c-cu-tUU" id="2ct-rk-0hy"/>
@@ -380,4 +390,9 @@
             <point key="canvasLocation" x="270" y="336"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="/Users/kmagnesen/Desktop/MM Images/fredsavage.png" width="200" height="200"/>
+        <image name="/Users/kmagnesen/Desktop/MM Images/hulk.png" width="200" height="200"/>
+        <image name="/Users/kmagnesen/Desktop/MM Images/machoman.png" width="200" height="200"/>
+    </resources>
 </document>

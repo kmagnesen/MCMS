@@ -14,11 +14,14 @@
 @property NSString *fullname;
 @property NSString *creatureDescription;
 @property NSMutableArray *superPowers;
+@property NSString *creatureImage;
 
 -(instancetype)initWithFullname:(NSString *)fullname;
 -(instancetype)initWithFullname:(NSString *)fullname creatureDescription:(NSString *)description;
+-(instancetype)initWithFullname:(NSString *)fullname creatureDescription:(NSString *)description creatureImage:(NSString *)imageName;
 
 +(instancetype)initWithFullname:(NSString *)fullname;
 +(instancetype)initWithFullname:(NSString *)fullname creatureDescription:(NSString *)description;
++(instancetype)initWithFullname:(NSString *)fullname creatureDescription:(NSString *)description creatureImage:(NSString *)imageName;
 
 @end

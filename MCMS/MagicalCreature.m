@@ -18,9 +18,16 @@
     return self;
 }
 
--(instancetype)initWithFullname:(NSString *)fullname creatureDescription:(NSString *)description{
+-(instancetype)initWithFullname:(NSString *)fullname creatureDescription:(NSString *)description {
     self = [self initWithFullname: fullname];
     self.creatureDescription = description;
+    return self;
+}
+
+-(instancetype)initWithFullname:(NSString *)fullname creatureDescription:(NSString *)description creatureImage:(NSString *)imageName{
+    self = [self initWithFullname: fullname];
+    self.creatureDescription = description;
+    self.creatureImage = imageName;
     return self;
 }
 
@@ -32,8 +39,12 @@
     return [[MagicalCreature alloc] initWithFullname:fullname creatureDescription:description];
 }
 
++(instancetype)initWithFullname:(NSString *)fullname creatureDescription:(NSString *)description creatureImage:(NSString *)imageName {
+    return [[MagicalCreature alloc] initWithFullname:fullname creatureDescription:description creatureImage:imageName];
+}
+
 -(NSString *)description {
-    return [NSString stringWithFormat:@"[Creature Name: %@ Description: (%@)", self.fullname, self.creatureDescription];
+    return [NSString stringWithFormat:@"%@", self.creatureDescription];
 }
 
 @end

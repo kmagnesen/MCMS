@@ -22,7 +22,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
+    [self.creatureImageView isEqual: self.magicalCreature.creatureImage];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

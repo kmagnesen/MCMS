@@ -26,9 +26,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    MagicalCreature *randySavage = [[MagicalCreature alloc]initWithFullname:@"Randy Savage" creatureDescription:@"The Macho Man"];
-    MagicalCreature *hulkHogan   = [[MagicalCreature alloc]initWithFullname:@"Hulk Hogan" creatureDescription:@"Mr. America"];
-    MagicalCreature *fredSavage  = [[MagicalCreature alloc]initWithFullname:@"Fred Savage" creatureDescription:@"From The Wonder Years"];
+    MagicalCreature *randySavage = [[MagicalCreature alloc]initWithFullname:@"Randy Savage" creatureDescription:@"The Macho Man" creatureImage:@"randysavage"];
+    MagicalCreature *hulkHogan   = [[MagicalCreature alloc]initWithFullname:@"Hulk Hogan" creatureDescription:@"Mr. America" creatureImage:@"hulk"];
+    MagicalCreature *fredSavage  = [[MagicalCreature alloc]initWithFullname:@"Fred Savage" creatureDescription:@"From The Wonder Years" creatureImage:@"fredsavage"];
 
     self.creatureArray = [NSMutableArray arrayWithObjects:randySavage, hulkHogan, fredSavage, nil];
 
