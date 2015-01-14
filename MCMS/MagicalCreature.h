@@ -13,7 +13,7 @@
 
 @property NSString *fullname;
 @property NSString *creatureDescription;
-@property NSMutableArray *skills;
+@property NSMutableArray *superPowers;
 
 -(instancetype)initWithFullname:(NSString *)fullname;
 -(instancetype)initWithFullname:(NSString *)fullname creatureDescription:(NSString *)description;

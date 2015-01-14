@@ -14,7 +14,7 @@
     self = [super init];
     self.fullname = fullname;
     self.creatureDescription = @"";
-    self.skills = [NSMutableArray new];
+    self.superPowers = [NSMutableArray new];
     return self;
 }
 
@@ -33,7 +33,7 @@
 }
 
 -(NSString *)description {
-    return [NSString stringWithFormat:@"MagicalCreature: %@ Description: (%@)", self.fullname, self.creatureDescription];
+    return [NSString stringWithFormat:@"[Creature Name: %@ Description: (%@)", self.fullname, self.creatureDescription];
 }
 
 @end

@@ -155,7 +155,7 @@
             </objects>
             <point key="canvasLocation" x="963" y="336"/>
         </scene>
-        <!--Creature Bio-->
+        <!--Creature View Controller-->
         <scene sceneID="s5x-TD-6fv">
             <objects>
                 <viewController id="y0c-cu-tUU" customClass="CreatureViewController" sceneMemberID="viewController">
@@ -261,7 +261,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="onAddSkillTapped:" destination="y0c-cu-tUU" eventType="touchUpInside" id="DXY-3M-iTl"/>
+                                    <action selector="onAddSuperPowerTapped:" destination="y0c-cu-tUU" eventType="touchUpInside" id="LLW-fH-TbZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -299,20 +299,20 @@
                                 <exclude reference="jQQ-hu-yex"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="BBr-aT-mOc"/>
-                                <exclude reference="Vjd-dW-Rrb"/>
-                                <exclude reference="DY7-k7-jgU"/>
-                                <exclude reference="L09-fM-rri"/>
+                                <exclude reference="MDH-pX-cC9"/>
                                 <exclude reference="2BE-hA-2Jp"/>
                                 <exclude reference="BLq-wk-MKf"/>
                                 <exclude reference="RYa-fW-wf6"/>
-                                <exclude reference="J6z-UI-Wa5"/>
-                                <exclude reference="Vqk-97-thr"/>
-                                <exclude reference="ZFE-2g-M5S"/>
                                 <exclude reference="LlS-jH-qJF"/>
                                 <exclude reference="Qic-oz-1aQ"/>
                                 <exclude reference="gc8-Tb-BKd"/>
-                                <exclude reference="MDH-pX-cC9"/>
+                                <exclude reference="DY7-k7-jgU"/>
+                                <exclude reference="L09-fM-rri"/>
+                                <exclude reference="BBr-aT-mOc"/>
+                                <exclude reference="Vjd-dW-Rrb"/>
+                                <exclude reference="J6z-UI-Wa5"/>
+                                <exclude reference="Vqk-97-thr"/>
+                                <exclude reference="ZFE-2g-M5S"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -324,24 +324,24 @@
                                 <include reference="jQQ-hu-yex"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="BBr-aT-mOc"/>
-                                <include reference="Vjd-dW-Rrb"/>
-                                <include reference="DY7-k7-jgU"/>
-                                <include reference="L09-fM-rri"/>
+                                <include reference="MDH-pX-cC9"/>
                                 <include reference="2BE-hA-2Jp"/>
                                 <include reference="BLq-wk-MKf"/>
                                 <include reference="RYa-fW-wf6"/>
-                                <include reference="J6z-UI-Wa5"/>
-                                <include reference="Vqk-97-thr"/>
-                                <include reference="ZFE-2g-M5S"/>
                                 <include reference="LlS-jH-qJF"/>
                                 <include reference="Qic-oz-1aQ"/>
                                 <include reference="gc8-Tb-BKd"/>
-                                <include reference="MDH-pX-cC9"/>
+                                <include reference="DY7-k7-jgU"/>
+                                <include reference="L09-fM-rri"/>
+                                <include reference="BBr-aT-mOc"/>
+                                <include reference="Vjd-dW-Rrb"/>
+                                <include reference="J6z-UI-Wa5"/>
+                                <include reference="Vqk-97-thr"/>
+                                <include reference="ZFE-2g-M5S"/>
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Creature Bio" id="Ata-Sk-qeL">
+                    <navigationItem key="navigationItem" id="Ata-Sk-qeL">
                         <barButtonItem key="rightBarButtonItem" title="Edit" id="Fl4-Tv-YJo">
                             <connections>
                                 <action selector="editButtonTapped:" destination="y0c-cu-tUU" id="2ct-rk-0hy"/>
@@ -349,7 +349,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="addSkillButton" destination="jQQ-hu-yex" id="DXG-Qr-E6Q"/>
+                        <outlet property="addSuperPowerButton" destination="jQQ-hu-yex" id="6Cl-hF-LPP"/>
                         <outlet property="creatureImageView" destination="RCJ-s7-GfS" id="Dfa-4V-V8S"/>
                         <outlet property="inputDescription" destination="UOy-iA-qVu" id="G2c-hS-4xy"/>
                         <outlet property="inputName" destination="CgK-gt-YRj" id="10J-k7-iDU"/>
